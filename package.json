@@ -6,8 +6,9 @@
   "scripts": {
     "dev": "wrangler dev --port 8787",
     "deploy": "wrangler deploy",
-    "check": "node --check src/index.js && node --check public/app.js",
-    "test": "node --test"
+    "bundle:dashboard": "node scripts/build-dashboard-worker.mjs",
+    "check": "node --check src/index.js && node --check public/app.js && node --check scripts/build-dashboard-worker.mjs",
+    "test": "npm run bundle:dashboard && node --test"
   },
   "devDependencies": {
     "wrangler": "^4.0.0"
