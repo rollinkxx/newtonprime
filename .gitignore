@@ -1,0 +1,11 @@
+node_modules/
+.wrangler/
+.dev.vars
+.env
+.env.*
+!.env.example
+.DS_Store
+coverage/
+# Local reverse-engineering material; the authored audit report is delivered separately.
+apk-analysis/
+APK-AUDIT.md
